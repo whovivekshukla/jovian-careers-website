@@ -36,6 +36,10 @@ JOBS = [
 def hello_world():
   return render_template('home.html', jobs=JOBS, companyname='Jovian')
 
+@app.route("/apply")
+def apply_job():
+  return render_template('apply.html', jobs=JOBS, companyname='Jovian')
+
 
 @app.route("/api/jobs")
 def list_jobs():
