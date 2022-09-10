@@ -12,7 +12,9 @@
        </div>
 
    <div class="col-3">
-     <a href="mailto:hello@jovian.ai?subject=Application for {{job['title']}}" type="button" class="btn btn-outline-primary ">Apply</a>
+     <form action="/apply" method="POST">
+       <button type="submit" name="id" class="btn btn-outline-primary" value="{{job['id']}}">Apply</button>
+       </form>
    </div>
        
       </div>
